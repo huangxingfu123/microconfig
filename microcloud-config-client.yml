@@ -1,20 +1,25 @@
 spring:
-  profiles:
-    active:
-      - dev
+   profiles:
+      active:
+        - dev
 ---
 server:
-  port:8201
+  port: 8201
 
 spring:
   profiles: dev
   application:
-    name: microconfig-test-client
+      name: microconfig-test-client5
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://admin:enjoy@localhost:7001/eureka
+ client:
+  serviceUrl:
+    defaultZone: http://admin:enjoy@localhost:7301/eureka
+  register-with-eureka: false
+
+info:
+  app.name: microcloud-config-client-dev2
+  company.name: enjoy2
 ---
 server:
   port: 8102
@@ -22,22 +27,14 @@ server:
 spring:
   profiles: beta
   application:
-    name: microconfig-test-client
+      name: microconfig-test-client5
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://admin:enjoy@localhost:7001/eureka
----
-server:
-  port: 8102
-
-spring:
-  profiles: beta
-  application:
-    name: microconfig-test-client
-
-eureka:
-  client:
-    service-url:
-      defaultZone:http://admin:enjoy@localhost:7001/eureka
+ client:
+  serviceUrl:
+    defaultZone: http://admin:enjoy@localhost:7301/eureka
+  register-with-eureka: false
+  
+info:
+  app.name: microcloud-config-client-beta2
+  company.name: enjoy

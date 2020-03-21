@@ -9,7 +9,7 @@ server:
 spring:
   profiles: dev
   application:
-      name: microconfig-test-client888
+      name: microconfig-test-client888999
 
 eureka:
  client:

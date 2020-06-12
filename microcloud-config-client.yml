@@ -9,13 +9,13 @@ server:
 spring:
   profiles: dev
   application:
-      name: microconfig-test-client888000
+      name: microconfig-test-client
 
-eureka:
- client:
-  serviceUrl:
-    defaultZone: http://admin:enjoy@localhost:7301/eureka
-  register-with-eureka: false
+# eureka:
+#  client:
+#   serviceUrl:
+#     defaultZone: http://admin:enjoy@localhost:7301/eureka
+#   register-with-eureka: false
 
 info:
   app.name: microcloud-config-client-dev

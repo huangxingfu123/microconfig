@@ -54,7 +54,7 @@ mybatis:
  - classpath:mapping/*.xml
 spring:
  application:
-    name: microcloud-config-product-client
+    name: microcloud-config-product-client789
  datasource:
    type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
    driver-class-name: com.mysql.jdbc.Driver # 配置MySQL的驱动程序类

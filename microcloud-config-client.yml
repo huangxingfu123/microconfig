@@ -21,7 +21,7 @@ spring:
 
 info:
   app.name: microcloud-config-client-dev
-  company.name: enjoyhxf78999
+  company.name: enjoyhxf78999000
 ---
 server:
   port: 8102

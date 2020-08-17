@@ -12,11 +12,14 @@ spring:
       name: microconfig-test-client
 
 
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://admin:enjoy@localhost:7301/eureka
-#    register-with-eureka: false
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: microcloud-config-bus-client-instance
+  client:
+    serviceUrl:
+      defaultZone: http://admin:enjoy@localhost:7301/eureka
+    register-with-eureka: false
 
 
 info:

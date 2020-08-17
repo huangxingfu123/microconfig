@@ -15,7 +15,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:enjoy@localhost:7001/eureka
+      defaultZone: http://admin:enjoy@eureka1:7001/eureka
   instance:
     prefer-ip-address: true #在地址栏显示ip地址
     instance-id: microcloud-config-bus-client-instance

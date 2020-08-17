@@ -13,13 +13,12 @@ spring:
 
 
 eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: microcloud-config-bus-client-instance
   client:
     serviceUrl:
       defaultZone: http://admin:enjoy@localhost:7301/eureka
-#    register-with-eureka: false
+  instance:
+    prefer-ip-address: true #在地址栏显示ip地址
+    instance-id: microcloud-config-bus-instance
 
 
 info:

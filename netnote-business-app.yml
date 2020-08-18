@@ -22,6 +22,30 @@ spring:
       password: netnote  # 认证密码
 #      roles:
 #       - USER # 授权角色
+  cloud:
+    stream:
+      rabbit:
+        bindings:
+          hxf-input:
+            consumer:
+              bindingRoutingKey: hxfRoutingKey
+      binders: #此处配置要绑定的mq的服务信息
+        netNoteRabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                addresses: localhost
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
+      bingdings:
+        hxf-input:
+          destination: netNoteExchange #要绑定的Exchange的名称
+          content-type: application/json #设置消息类型，本次为json
+          binder: netNoteRabbit
+          group: netNoteGroup #针对生产者发出的消息，相同组下的消费者，只能有一个成功接收
 
 mybatis:
   mapper-locations: # 所有的mapper映射文件

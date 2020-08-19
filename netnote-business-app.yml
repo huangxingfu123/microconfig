@@ -16,12 +16,13 @@ spring:
     url: jdbc:mysql://localhost:3306/net_note?serverTimezone=GMT%2B8 # 数据库连接地址
     username: root # 数据库用户名
     password: root # 数据库连接密码
-  security:
-    user:
-      name: admin  # 认证用户名
-      password: netnote  # 认证密码
-#      roles:
-#       - USER # 授权角色
+  zipkin:
+    base-url: http://localhost:8601  #所有追踪用到的数据提交到这个服务
+    sender:
+      type: rabbit   #提交的类型是web服务
+  sleuth:
+    sampler:
+      probability: 1.0 #定义采样比率，默认0.1
   cloud:
     stream:
       rabbit:
@@ -51,6 +52,7 @@ mybatis:
   mapper-locations: # 所有的mapper映射文件
     - classpath:mappers/*.xml
   type-aliases-package: com.netnote.common.model
+
 eureka:
   client: # 客户端进行Eureka注册的配置
     register-with-eureka: true
@@ -83,4 +85,9 @@ snowflake4idworker:
   datacenterId: 1
   sequence: 1
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 ##########################################

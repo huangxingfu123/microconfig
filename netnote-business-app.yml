@@ -61,7 +61,7 @@ eureka:
     register-with-eureka: true
     service-url:
       #defaultZone: http://localhost:7001/eureka
-      defaultZone: http://admin:netnote@eureka1:7001/eureka # ,http://admin:enjoy@eureka2:7002/eureka,http://admin:enjoy@eureka3:7003/eureka
+      defaultZone: http://admin:net-note@eureka1:7001/eureka # ,http://admin:enjoy@eureka2:7002/eureka,http://admin:enjoy@eureka3:7003/eureka
   instance:
     instance-id: notebusiness-instance-1
     prefer-ip-address: true
@@ -74,13 +74,13 @@ ribbon:
 
 info:
   app.name: notebusiness-info
-  company.name: netnote
+  company.name: net-note
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
 
 logging:
   level:
-    com.netnote.business: debug
+    com.net.note.business: debug
 
 #自定义参数
 snowflake4idworker:
